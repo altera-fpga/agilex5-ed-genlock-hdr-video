@@ -26,7 +26,7 @@ The projects are stored in individual folders, classified by device families and
 
 |<center markdown="1">SDI Input Image </center>|<center markdown="1">SDI Output Image</center>|
 | --- | --- |
-| ![Input Capture](./images/images/sdi-input-hdr-sdr-lut.png) | ![Output Capture](./images/images/sdi-output-hdr-sdr-lut.png)  |
+| ![Input Capture](./images/sdi-input-hdr-sdr-lut.png) | ![Output Capture](./images/sdi-output-hdr-sdr-lut.png)  |
 
 ---
 
