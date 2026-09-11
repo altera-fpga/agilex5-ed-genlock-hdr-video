@@ -26,7 +26,7 @@ The projects are stored in individual folders, classified by device families and
 
 |<center markdown="1">SDI Input Image </center>|<center markdown="1">SDI Output Image</center>|
 | --- | --- |
-| ![Input Capture](agilex5e-ed/a5e065b-mod-devkit/docs/images/sdi-input-hdr-sdr-lut.png) | ![Output Capture](agilex5e-ed/a5e065b-mod-devkit/docs/images/sdi-output-hdr-sdr-lut.png)  |
+| ![Input Capture](./images/images/sdi-input-hdr-sdr-lut.png) | ![Output Capture](./images/images/sdi-output-hdr-sdr-lut.png)  |
 
 ---
 
