@@ -1,0 +1,72 @@
+# (C) 2001-2026 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions and other 
+# software and tools, and its AMPP partner logic functions, and any output 
+# files from any of the foregoing (including device programming or simulation 
+# files), and any associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License Subscription 
+# Agreement, Altera IP License Agreement, or other applicable 
+# license agreement, including, without limitation, that your use is for the 
+# sole purpose of programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+
+::drc::add_waiver \
+	-description {DA is measuring the wrong clock} \
+	-rule_id {IPC-40026} \
+	-query_string {"Clock frequency of driver" == 700 && "Clock Frequency of Protocol IP" == 322.265625} \
+	-stages {{Analysis & Elaboration}} \
+	-tag {} \
+	-timestamp {} \
+	-owner {user} \
+	-no_warn
+
+::drc::add_waiver \
+	-description {Any paths involving one_hot_sel_int are OK and can be waived/suppressed (quasi-static)} \
+	-rule_id {CDC-50012} \
+	-query_string {From =~ 'r_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[0]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[1]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[3]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[2]   dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|rx_lane_desired_state_src_clk_sync[0]' && To =~ 'dr_top_inst|common_sip_tennm_sm_hssi_pld_chnl_dp_sip_atom_ch0|src_lane|src_sync_inst|sm_src_sync_hip[4]|din_s1' && "From Clock" =~ 'axi4s_clk_iopll_inst|axi4s_clk_iopll_refclk   dr_top_inst|common_sip_tennm_sm_hssi_pld_chnl_dp_sip_atom_ch0_src_divided_osc_clk[0]' && "To Clock" =~ 'dr_top_inst|common_sip_tennm_sm_hssi_pld_chnl_dp_sip_atom_ch0_src_divided_osc_clk[0]' && Reason == 'Asynchronous transfer'} \
+	-stages [list analysis_final_quartus_sta {Timing Signoff}] \
+	-tag {} \
+	-timestamp {} \
+	-owner {user} \
+	-no_warn
+
+::drc::add_waiver \
+	-description {Any paths involving one_hot_sel_int are OK and can be waived/suppressed (quasi-static)} \
+	-rule_id {CDC-50012} \
+	-query_string {From =~ 'dr_top_inst|tennm_sm_hssi_pld_chnl_dp_ch0_0~pldif_reset_reg   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[0]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[1]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[3]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[2]' && To =~ 'dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|persystem[0].perxcvr[0].o_hio_rstfec_fec_rx_rdy_n_sync|resync_chains[0].synchronizer_nocut|din_s1' && "From Clock" =~ 'axi4s_clk_iopll_inst|axi4s_clk_iopll_refclk   dr_top_inst|common_sip_tennm_sm_hssi_pld_chnl_dp_sip_atom_ch0_src_divided_osc_clk[0]' && "To Clock" =~ 'dr_top_inst|common_sip_tennm_sm_hssi_pld_chnl_dp_sip_atom_ch0_src_divided_osc_clk[0]' && Reason == 'User-specified'} \
+	-stages [list analysis_final_quartus_sta {Timing Signoff}] \
+	-tag {} \
+	-timestamp {} \
+	-owner {user} \
+	-no_warn
+
+::drc::add_waiver \
+	-description {Any paths involving one_hot_sel_int are OK and can be waived/suppressed (quasi-static)} \
+	-rule_id {CDC-50001} \
+	-query_string {From =~ 'dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[0]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[1]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[3]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[2]' && To =~ 'dr_top_inst|tennm_sm_hssi_pld_chnl_dp_ch0_0~pldif_reset_reg' && "From Clock" =~ 'axi4s_clk_iopll_inst|axi4s_clk_iopll_refclk' && "To Clock" =~ 'dr_top_inst|common_sip_tennm_sm_hssi_pld_chnl_dp_sip_atom_ch0_src_divided_osc_clk[0]' && Reason == 'Asynchronous transfer'} \
+	-stages [list analysis_final_quartus_sta {Timing Signoff}] \
+	-tag {} \
+	-timestamp {} \
+	-owner {user} \
+	-no_warn
+
+::drc::add_waiver \
+	-description {Any paths involving one_hot_sel_int are OK and can be waived/suppressed (quasi-static)} \
+	-rule_id {CDC-50001} \
+	-query_string {From =~ 'dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[0]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[1]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[3]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[2]' && To =~ 'rx_inst|sdi_phy_adapter_inst|rx_comp_gen.rx_parallel_data_reg' && "From Clock" =~ 'axi4s_clk_iopll_inst|axi4s_clk_iopll_refclk' && "To Clock" =~ 'dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof0_o_rx_clkout[0]   dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof1_o_rx_clkout[0]   dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof2_o_rx_clkout[0]   dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof3_o_rx_clkout[0]' && Reason == 'Asynchronous transfer'} \
+	-stages [list analysis_final_quartus_sta {Timing Signoff}] \
+	-tag {} \
+	-timestamp {} \
+	-owner {user} \
+	-no_warn
+
+::drc::add_waiver \
+	-description {Any paths involving one_hot_sel_int are OK and can be waived/suppressed (quasi-static)} \
+	-rule_id {CDC-50001} \
+	-query_string {From =~ 'dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[0]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[1]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[3]   dr_ctrl_inst|dr_ctrl|intel_dr_gts_core_inst|one_hot_sel_int[2]' && To =~ 'rx_inst|sdi_phy_adapter_inst|rx_comp_gen.rx_parallel_data_valid' && "From Clock" =~ 'axi4s_clk_iopll_inst|axi4s_clk_iopll_refclk' && "To Clock" =~ 'dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof0_o_rx_clkout[0]   dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof1_o_rx_clkout[0]   dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof2_o_rx_clkout[0]   dr_top_inst|dphy_rx_inst_period_dphy_rx_period_U_base_profile0_period_sip_inst|prof3_o_rx_clkout[0]' && Reason == 'Asynchronous transfer'} \
+	-stages [list analysis_final_quartus_sta {Timing Signoff}] \
+	-tag {} \
+	-timestamp {} \
+	-owner {user} \
+	-no_warn

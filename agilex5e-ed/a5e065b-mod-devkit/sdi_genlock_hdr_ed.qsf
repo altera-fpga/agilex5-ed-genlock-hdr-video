@@ -1,0 +1,168 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2026  Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Altera and sold by Altera or its authorized distributors.  Please
+# refer to the Altera Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 26.1.1 Internal Build 130 05/14/2026 SC Pro Edition
+# Date created = 09:25:33  May 21, 2026
+#
+# -------------------------------------------------------------------------- #
+set_global_assignment -name TOP_LEVEL_ENTITY sdi_genlock_hdr_ed
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 26.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "01:58:08  FEBRUARY 20, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "26.1.1 Pro Edition"
+set_global_assignment -name FAMILY "Agilex 5"
+set_global_assignment -name DEVICE A5ED065BB32AE4S
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_global_assignment -name GLOBAL_PLACEMENT_EFFORT "MAXIMUM EFFORT"
+set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
+set_global_assignment -name SEED 1
+set_global_assignment -name PWRMGT_SLAVE_DEVICE0_ADDRESS 62
+set_global_assignment -name PWRMGT_SLAVE_DEVICE1_ADDRESS 00
+set_global_assignment -name PWRMGT_SLAVE_DEVICE2_ADDRESS 00
+set_global_assignment -name USE_PWRMGT_SCL SDM_IO0
+set_global_assignment -name USE_PWRMGT_SDA SDM_IO12
+set_global_assignment -name USE_CONF_DONE SDM_IO16
+set_global_assignment -name PWRMGT_PAGE_COMMAND_ENABLE OFF
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
+set_global_assignment -name PWRMGT_SLAVE_DEVICE_TYPE OTHER
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name DEVICE_INITIALIZATION_CLOCK OSC_CLK_1_125MHZ
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_125MHZ
+set_global_assignment -name PRESERVE_UNUSED_XCVR_CHANNEL ON
+set_global_assignment -name GENERATE_COMPRESSED_SOF ON
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name BOARD "Agilex 5 FPGA E-Series 065B Modular Development Kit MK-A5E065BB32AEA"
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
+set_location_assignment PIN_BU28 -to fpga_core_resetn
+set_location_assignment PIN_BK31 -to clk_100mhz
+set_location_assignment PIN_BR69 -to lmk03328_pdn
+set_location_assignment PIN_BE96 -to fmc_lmh1983_init
+set_location_assignment PIN_BE93 -to fmc_fpga_fldn
+set_location_assignment PIN_BR71 -to fmc_fpga_vsyncn
+set_location_assignment PIN_BU71 -to fmc_fpga_hsyncn
+set_location_assignment PIN_AV120 -to txpll_refclk
+set_location_assignment PIN_BB120 -to syspll_refclk
+set_location_assignment PIN_AY120 -to xcvr_refclk_1485
+set_location_assignment PIN_BE129 -to fmc_tx0_p
+set_location_assignment PIN_BE126 -to fmc_tx0_n
+set_location_assignment PIN_AY135 -to fmc_rx2_p
+set_location_assignment PIN_AY133 -to fmc_rx2_n
+set_location_assignment PIN_BP112 -to i2c_sdi_scl
+set_location_assignment PIN_BK118 -to i2c_sdi_sda
+set_location_assignment PIN_BR28  -to i2c_clocks_scl
+set_location_assignment PIN_BR31  -to i2c_clocks_sda
+set_location_assignment PIN_BU109 -to i2c_max10_scl
+set_location_assignment PIN_BK109 -to i2c_max10_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_max10_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_max10_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to i2c_max10_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to i2c_max10_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name INPUT_TERMINATION OFF -to i2c_max10_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name INPUT_TERMINATION OFF -to i2c_max10_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name SLEW_RATE 2 -to i2c_max10_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name SLEW_RATE 2 -to i2c_max10_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_clocks_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_clocks_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to i2c_clocks_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to i2c_clocks_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name INPUT_TERMINATION OFF -to i2c_clocks_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name INPUT_TERMINATION OFF -to i2c_clocks_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name SLEW_RATE 2 -to i2c_clocks_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name SLEW_RATE 2 -to i2c_clocks_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name DR_IP_INSTANCE dphy_rx -to dphy_rx_inst -section_id dr_top
+set_instance_assignment -name DR_GROUP_RECONFIG_ID 1 -to dphy_rx_inst -section_id dr_top
+set_instance_assignment -name DR_IP_INSTANCE_RELATIVE_LOCATION 0 -to dphy_rx_inst -section_id dr_top
+set_instance_assignment -name DR_COMBINATION 1 -to dphy_rx_inst -section_id dr_top
+set_global_assignment -name DR_GROUP_STARTUP_COMBINATION 1 -section_id dr_top
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_sdi_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_sdi_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to i2c_sdi_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to i2c_sdi_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name INPUT_TERMINATION OFF -to i2c_sdi_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name INPUT_TERMINATION OFF -to i2c_sdi_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name SLEW_RATE 2 -to i2c_sdi_scl -entity sdi_genlock_hdr_ed
+set_instance_assignment -name SLEW_RATE 2 -to i2c_sdi_sda -entity sdi_genlock_hdr_ed
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to fpga_core_resetn
+set_instance_assignment -name IO_STANDARD 1.2V -to lmk03328_pdn
+set_instance_assignment -name IO_STANDARD 1.2V -to fmc_lmh1983_init
+set_instance_assignment -name IO_STANDARD 1.2V -to fmc_fpga_fldn
+set_instance_assignment -name IO_STANDARD 1.2V -to fmc_fpga_vsyncn
+set_instance_assignment -name IO_STANDARD 1.2V -to fmc_fpga_hsyncn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to clk_100mhz
+set_instance_assignment -name IO_STANDARD "CURRENT MODE LOGIC (CML)" -to txpll_refclk
+set_instance_assignment -name IO_STANDARD "CURRENT MODE LOGIC (CML)" -to syspll_refclk
+set_instance_assignment -name IO_STANDARD "CURRENT MODE LOGIC (CML)" -to xcvr_refclk_1485
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to fmc_tx0_p
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to fmc_tx0_n
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to fmc_rx2_p
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to fmc_rx2_n
+set_instance_assignment -name SLEW_RATE 1 -to fmc_lmh1983_init
+set_instance_assignment -name SLEW_RATE 1 -to fmc_fpga_fldn
+set_instance_assignment -name SLEW_RATE 1 -to fmc_fpga_vsyncn
+set_instance_assignment -name SLEW_RATE 1 -to fmc_fpga_hsyncn
+set_instance_assignment -name SLEW_RATE 2 -to lmk03328_pdn
+set_instance_assignment -name SLEW_RATE 3 -to fmc_tx0_p
+set_instance_assignment -name SLEW_RATE 3 -to fmc_tx0_n
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to fmc_lmh1983_init
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to fmc_fpga_fldn
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to fmc_fpga_vsyncn
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to fmc_fpga_hsyncn
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 40 OHM WITHOUT CALIBRATION" -to lmk03328_pdn
+set_instance_assignment -name INPUT_TERMINATION OFF -to clk_100mhz
+set_instance_assignment -name INPUT_TERMINATION OFF -to fpga_core_resetn
+set_global_assignment -name IP_FILE             src/ip/reset_release.ip
+set_global_assignment -name IP_FILE             src/ip/xcvr_ref_sysclk.ip
+set_global_assignment -name IP_FILE             src/ip/reset_seq.ip
+set_global_assignment -name IP_FILE             src/ip/dr_ctrl.ip
+set_global_assignment -name IP_FILE             src/ip/axi4s_clk_iopll.ip
+set_global_assignment -name IP_FILE             src/ip/output_buf_i2c.ip
+set_global_assignment -name IP_FILE             src/ip/phy_adapter/txdata_fifo.ip
+set_global_assignment -name IP_FILE             src/ip/phy_adapter/rxdata_3ghd_fifo.ip
+set_global_assignment -name IP_FILE             src/ip/phy_adapter/rxdata_12g_fifo.ip
+set_global_assignment -name IP_FILE             src/ip/phy_adapter/rxdata_6g_fifo.ip
+set_global_assignment -name IP_FILE             src/ip/rx/dphy_rx.ip
+set_global_assignment -name IP_FILE             src/ip/tx/dphy_tx.ip
+set_global_assignment -name VERILOG_FILE        src/rtl/alt_reset_delay.v
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/edge_detector.sv
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/reset_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/phy_adapter/sdi_phy_adapter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/tx/tx_mr_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/rx/rx_mr_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/rx/sdi_rx_dr_gts.sv
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/en_refclk_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE  src/rtl/sdi_genlock_hdr_ed.sv
+set_global_assignment -name SDC_ENTITY_FILE     src/rtl/phy_adapter/sdi_phy_adapter.sdc -entity sdi_phy_adapter
+set_global_assignment -name SEARCH_PATH         src/sw/build/mem_init
+set_global_assignment -name QIP_FILE            src/sw/build/mem_init/meminit.qip
+set_global_assignment -name MESSAGE_DISABLE 23414
+set_global_assignment -name MESSAGE_DISABLE 127005
+set_global_assignment -name MESSAGE_DISABLE 23413
+set_global_assignment -name MESSAGE_DISABLE 127004
+set_global_assignment -name QIP_FILE support_logic/dr_top/dr_top.qip -tag quartus_tlg
+set_global_assignment -name SPD_FILE support_logic/dr_top/dr_top.spd -tag quartus_tlg
+set_global_assignment -name PRE_FLOW_SCRIPT_FILE "quartus_sh:./script/generation_step_vds.tcl"
+
+
+
+
+
+
