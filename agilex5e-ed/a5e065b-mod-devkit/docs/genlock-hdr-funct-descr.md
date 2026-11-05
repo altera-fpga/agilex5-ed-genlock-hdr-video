@@ -336,7 +336,7 @@ Additionally, Precomputed LUT libraries are also available elsewhere for HDR-to-
 For more information, refer to the following resources:
 
 * [Sony Professional Video LUT Library](https://pro.sony/en_GB/technology/professional-video-lut-look-up-table)
-* [BBC R&D HDR TV HLG LUT Release Notes](https://downloads.bbc.co.uk/rd/pubs/papers/HDR/BBC_HDRTV_HLG_LUT_Release_Notes_v1-7.pdf)
+* [BBC R&D HDR Television Production LUTs Library](https://github.com/bbc/bbc_hdr_television_production_luts)
 
 ---
 
